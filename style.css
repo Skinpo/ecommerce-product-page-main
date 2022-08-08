@@ -152,6 +152,9 @@ li:hover a {
   border: none;
   background-color: var(--orange);
   margin-bottom: 30px;
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 600;
 }
 
 .cart-closed {
