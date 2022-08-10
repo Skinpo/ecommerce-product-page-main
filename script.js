@@ -3,6 +3,8 @@ const cartDetails = document.querySelector(".cart-details");
 const count = document.querySelector(".count")
 const minus = document.querySelector(".minus")
 const plus = document.querySelector(".plus")
+const addToCart = document.querySelector(".add-cart")
+const notify = document.querySelector(".notify")
 
 shoppingIcon.addEventListener("click", () => {
     if (cartDetails.classList.contains("cart-closed")) {
@@ -23,4 +25,13 @@ minus.addEventListener("click", () => {
         count.innerHTML--
     }
 })
+
+addToCart.addEventListener("click", () => { 
+    if(notify.classList.contains("show")) {
+        notify.classList.remove("show")
+    }
+    notify.innerHTML++
+    count.innerHTML = 0 
+})
+
 

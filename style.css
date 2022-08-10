@@ -19,8 +19,6 @@
 
 body {
     font-size: 11px;
-    /* text-align: center; */
-    /* color: hsl(228, 45%, 44%); */
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -31,7 +29,6 @@ body {
   margin: auto;
   display: flex;
   flex-wrap: wrap;
-  /* background-color: var(--pink); */
   height: 13vh;
 }
 
@@ -81,6 +78,7 @@ li:hover a {
   border-top: 0px;
   border-left: 0px;
   border-right: 0px;
+  color: black;
   }
 
 .notification {
@@ -94,6 +92,21 @@ li:hover a {
   padding-right: 50px;
   padding-top: 10px;
   cursor: pointer;
+}
+
+.notify {
+  background-color: var(--orange);
+  width: 20px;
+  border-radius: 10px;
+  color: white;
+  text-align: center;
+  position: relative;
+  top: -30px;
+  left: 10px;
+}
+
+.show {
+  visibility: hidden;
 }
 
 .cart-details {
@@ -114,7 +127,6 @@ li:hover a {
 }
 
 .title p {
-  /* padding-left: 30px; */
   font-size: 1rem;
   font-weight: 600;
   flex: 2;
@@ -184,7 +196,7 @@ li:hover a {
 /* new image area start */
 
 .container-2 {
-  width: 75%;
+  width: 70%;
   margin: 80px auto;
   display: flex;
   flex-wrap: wrap;
@@ -335,27 +347,30 @@ input[type="radio"]:checked {
   display: flex;
 }
 
-.counter p {
+.quantity p {
   font-size: 1.5rem;
   font-weight: 600;
-  /* position: relative; */
-  margin-left: 40px;
   margin-top: 15px;
-
+  padding-left: 7px;
 }
 
-.minus, .plus {
+.minus, .plus, .quantity {
   border: none;
   cursor: pointer;
   background-color: var(--lightergrey);
+  width: 30px;
 }
 
-.minus {
-  margin-left: 20px;
+.minus, .quantity {
+  margin-right: 25px;
 }
 
-.plus svg {
-  margin-left: 40px;
+.minus{
+  margin-left: 10px;
+}
+
+.plus {
+  justify-content: right;
 }
 
 .call-to-action button {
