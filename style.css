@@ -117,6 +117,7 @@ li:hover a {
   right: 70px;
   border-radius: 10px;
   box-shadow: 5px 5px 18px var(--lightgrey);
+  z-index: 1000;
 }
 
 .title {
@@ -136,27 +137,36 @@ li:hover a {
   overflow: auto;
   height: 100px;
   padding: 20px 30px;
-  display: flex;
 }
 
-.trash {
-  width: 16px;
-  height: 23px;
+ul li {
+  display: flex;
+  margin-bottom: 15px;
+  height: 60px;
+}
+
+ul li img {
+  border-radius: 5px;
+  width: 60px;
+}
+
+.fa-trash-alt {
+  font-size: 1.3rem;
+  color: var(--lightgrey);
+}
+
+ul li button {
+  border: none;
+  background-color: transparent;
   cursor: pointer;
 }
 
-.product-thumbnail, .product-thumbnail img {
-  width: 60px;
-  height: 60px;
-  border-radius: 5px;
-}
-
-.shopping-content p {
+ul p {
   font-size: 0.8rem;
   padding-left: 18px;
   color: var(--darkgrey);
   padding-top: 5px;
-  line-height: 1.3rem;
+  line-height: 1rem;
   font-weight: 300;
 }
 

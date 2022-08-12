@@ -5,6 +5,7 @@ const minus = document.querySelector(".minus")
 const plus = document.querySelector(".plus")
 const addToCart = document.querySelector(".add-cart")
 const notify = document.querySelector(".notify")
+const input = document.querySelector(".shopping-content")
 
 shoppingIcon.addEventListener("click", () => {
     if (cartDetails.classList.contains("cart-closed")) {
@@ -26,12 +27,42 @@ minus.addEventListener("click", () => {
     }
 })
 
-addToCart.addEventListener("click", () => { 
-    if(notify.classList.contains("show")) {
+const addItems = () => {
+    const newLi = document.createElement("li");
+    const delBtn = document.createElement("button");
+
+    delBtn.innerHTML = '<i class="fas fa-trash-alt"></i>';
+
+    newLi.innerHTML = `
+                        <img src="images/image-product-1-thumbnail.jpg" alt="cart-thumbnail"/>
+                        <p>Fall Limited Edition Sneakers $125.00 x ${count.innerHTML}   <b>${count.innerHTML * 125.00}</b></p>
+                        `;
+
+    if (count.innerHTML <= 0) {
         notify.classList.remove("show")
-    }
-    notify.innerHTML++
-    count.innerHTML = 0 
-})
+        alert("Please add a shopping item")
+    }else {
+        // // input.value = newLi;
+        newLi.appendChild(delBtn);
+        input.appendChild(newLi);
+        if(notify.classList.contains("show")) {
+            notify.classList.remove("show")
+            }
+            notify.innerHTML++
+            count.innerHTML = 0
+        }
 
+     // delete button on li list
+    delBtn.addEventListener("click", function () {
+        const del = confirm("You are about to delete this item!!!");
+        if (del == true) {
+          const parent = this.parentNode;
+          parent.remove();
+          notify.innerHTML--
+        }
+      });
 
+};
+    
+
+addToCart.addEventListener("click", addItems)
