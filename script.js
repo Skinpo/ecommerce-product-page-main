@@ -6,6 +6,8 @@ const plus = document.querySelector(".plus")
 const addToCart = document.querySelector(".add-cart")
 const notify = document.querySelector(".notify")
 const input = document.querySelector(".shopping-content")
+const clear = document.querySelector(".checkout")
+const price = document.querySelector(".slash")
 
 shoppingIcon.addEventListener("click", () => {
     if (cartDetails.classList.contains("cart-closed")) {
@@ -35,7 +37,7 @@ const addItems = () => {
 
     newLi.innerHTML = `
                         <img src="images/image-product-1-thumbnail.jpg" alt="cart-thumbnail"/>
-                        <p>Fall Limited Edition Sneakers $125.00 x ${count.innerHTML}   <b>${count.innerHTML * 125.00}</b></p>
+                        <p>Fall Limited Edition Sneakers $125.00 x ${count.innerHTML} <b> $ ${count.innerHTML * 125}.00</b></p>
                         `;
 
     if (count.innerHTML <= 0) {
@@ -66,3 +68,8 @@ const addItems = () => {
     
 
 addToCart.addEventListener("click", addItems)
+
+clear.addEventListener("click", () => {
+    input.innerHTML = "";
+    notify.innerHTML = 0;
+  });
