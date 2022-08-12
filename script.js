@@ -8,12 +8,15 @@ const notify = document.querySelector(".notify")
 const input = document.querySelector(".shopping-content")
 const clear = document.querySelector(".checkout")
 const price = document.querySelector(".slash")
+const checkOut = document.querySelector(".bottom-button")
+const placeHolder = document.querySelector(".placeholder")
 
 shoppingIcon.addEventListener("click", () => {
     if (cartDetails.classList.contains("cart-closed")) {
         cartDetails.classList.remove("cart-closed")
     } else {
-        cartDetails.classList.add("cart-closed")
+        // placeHolder.classList.remove("placeholder-hide")   
+        cartDetails.classList.add("cart-closed") 
     }
 })
 
@@ -32,6 +35,7 @@ minus.addEventListener("click", () => {
 const addItems = () => {
     const newLi = document.createElement("li");
     const delBtn = document.createElement("button");
+    
 
     delBtn.innerHTML = '<i class="fas fa-trash-alt"></i>';
 
@@ -52,7 +56,10 @@ const addItems = () => {
             }
             notify.innerHTML++
             count.innerHTML = 0
+            placeHolder.innerHTML = ""
         }
+
+
 
      // delete button on li list
     delBtn.addEventListener("click", function () {
@@ -62,6 +69,7 @@ const addItems = () => {
           parent.remove();
           notify.innerHTML--
         }
+        
       });
 
 };
@@ -72,4 +80,5 @@ addToCart.addEventListener("click", addItems)
 clear.addEventListener("click", () => {
     input.innerHTML = "";
     notify.innerHTML = 0;
+    placeHolder.innerHTML = "Your Cart is Empty"
   });
