@@ -63,7 +63,7 @@ const addItems = () => {
 
      // delete button on li list
     delBtn.addEventListener("click", function () {
-        const del = confirm("You are about to delete this item!!!");
+        const del = confirm("Do you want to delete item!!!");
         if (del == true) {
           const parent = this.parentNode;
           parent.remove();
