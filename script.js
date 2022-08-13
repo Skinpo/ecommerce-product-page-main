@@ -81,4 +81,5 @@ clear.addEventListener("click", () => {
     input.innerHTML = "";
     notify.innerHTML = 0;
     placeHolder.innerHTML = "Your Cart is Empty"
+
   });
