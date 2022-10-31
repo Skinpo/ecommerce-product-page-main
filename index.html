@@ -2,106 +2,142 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="https://kit.fontawesome.com/1c15b1ef42.js" crossorigin="anonymous"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="style.css">
   <title>Frontend Mentor | E-commerce product page</title>
 </head>
 <body>
-<header>
-  <div class="container">
 
-    <!--First div for the header-->
-    <div class="navbar">
-      <div class="logo">
-        <h1>sneakers</h1>
-      </div>
-
-      <div class="nav-elements">
-        <nav>
-          <ul class="nav-ul">
-            <li><a>Collections</a></li>
-            <li><a>Men</a></li>
-            <li><a>Women</a></li>
-            <li><a>About</a></li>
-            <li><a>Contact</a></li>
-          </ul>
-        </nav>
-      </div>
-    
-    </div>
-    <!--Second div for the header-->
-    <!--shopping cart-->
-    <div id="shopping-area">
-        
-      <div class="shopping-cart">
-        <img src="./images/icon-cart.svg" alt="cart">
-        <p class="notify show">0</p>
-      </div>
-
-      <div class="cart-details cart-closed">
-        <div class="title">
-          <p>Cart</p>
-        </div>
-
-        <h4 class="placeholder">
-          Your Cart is Empty
-        </h4>
-
-        <ul class="shopping-content">
-                           
-          <!--
-            <li>
-              <img src="images/image-product-1-thumbnail.jpg" alt="cart-thumbnail">
-              <p>Fall Limited Edition Sneakers $125.00 x 3 <b>$375.000</b> </p>
-              <button>
-                <i class="fas fa-trash-alt"></i>
-              </button>
-            </li>
-          -->
-            
-        </ul>  
-
-        <div class="checkout">
-          <button>Checkout</button>
-        </div>
-    
-
-      </div>
-
-      <img  class="image-avatar" src="./images/image-avatar.png" alt="profile">
-
-    </div>
-
-  </div>
-  <hr>
-</header>
-
-<main class="container-2">
-
-  <!--image section-->
-  <div class="content-area">
-
-    <div class="thumbnails">
-
-      <input type="radio" name="image" id="one" class="input" checked>
-
-      <input type="radio" name="image" id="two" class="input">
+  <header>
+    <div class="container">
   
-      <input type="radio" name="image" id="three" class="input">
+      <!--First div for the header-->
+      <div class="navbar">
+        <div class="logo">
+          <h1>sneakers</h1>
+        </div>
   
-      <input type="radio" name="image" id="four">   
-      
-      <div class="display-image">
+        <div class="nav-elements">
+          <nav>
+            <ul class="nav-ul">
+              <li><a>Collections</a></li>
+              <li><a>Men</a></li>
+              <li><a>Women</a></li>
+              <li><a>About</a></li>
+              <li><a>Contact</a></li>
+            </ul>
+          </nav>
+        </div>
       
       </div>
+      <!--Second div for the header-->
+      <!--shopping cart-->
+      <div id="shopping-area">
+          
+        <div class="shopping-cart">
+          <img src="./images/icon-cart.svg" alt="cart">
+          <p class="notify show">0</p>
+        </div>
+  
+        <div class="cart-details cart-closed">
+          <div class="title">
+            <p>Cart</p>
+          </div>
+  
+          <h4 class="placeholder">
+            Your Cart is Empty
+          </h4>
+  
+          <ul class="shopping-content">
+                             
+            <!--
+              <li>
+                <img src="images/image-product-1-thumbnail.jpg" alt="cart-thumbnail">
+                <p>Fall Limited Edition Sneakers $125.00 x 3 <b>$375.000</b> </p>
+                <button>
+                  <i class="fas fa-trash-alt"></i>
+                </button>
+              </li>
+            -->
+              
+          </ul>  
+  
+          <div class="checkout">
+            <button>Checkout</button>
+          </div>
+      
+  
+        </div>
+  
+        <img  class="image-avatar" src="./images/image-avatar.png" alt="profile">
+  
+      </div>
+  
+    </div>
+    <hr>
+  </header>
 
-    </div> 
 
-  </div>
+  <main class="container-2">
 
-   <!--content section-->
+    <div class="content-area">
+
+      <div class="radio-inputs">
+
+        <input type="radio" id="one" name="image" checked>
+        <input type="radio" id="two" name="image">
+        <input type="radio" id="three" name="image">
+        <input type="radio" id="four" name="image">
+
+        <section class="large-images">
+  
+          <div class="main-image image1">
+            <img src="../images/image-product-1.jpg" alt="product image 1" class="img1">
+          </div>
+    
+          <div class="main-image image2">
+            <img src="../images/image-product-2.jpg" alt="product image 2" class="img2">
+          </div>
+    
+          <div class="main-image image3">
+            <img src="../images/image-product-3.jpg" alt="product image 3" class="img3">
+          </div>
+    
+          <div class="main-image image4">
+            <img src="../images/image-product-4.jpg" alt="product image 4" class="img4">
+          </div>
+    
+        </section>
+
+        <div id="thumbnails">
+  
+          <label for="one">
+            <img src="../images/image-product-1-thumbnail.jpg" class="one" alt="thumbnail 1">
+          </label>
+          
+          <label for="two">
+            <img src="../images/image-product-2-thumbnail.jpg" class="two" alt="thumbnail 2">
+          </label>
+          
+          <label for="three">
+            <img src="../images/image-product-3-thumbnail.jpg" class="three" alt="thumbnail 3">
+          </label>
+          
+          <label for="four">
+            <img src="../images/image-product-4-thumbnail.jpg" class="four" alt="thumbnail 4">
+          </label>
+    
+        </div>
+  
+      </div>
+  
+
+    </div>
+
+
+
+    <!--content section-->
   <div class="content-area description">
     <h4>Sneaker Company</h4>
     <h2>Fall Limited Edition Sneakers</h2>
@@ -137,7 +173,7 @@
       <div class="call-to-action">
 
         <button class="add-cart">
-          <img src="images/cart_2.png" alt="cart">Add to cart
+          <img src="../images/icon-cart2.svg" alt="cart">Add to cart
         </button>
 
       </div>
@@ -147,8 +183,10 @@
 
   </div>
 
-</main>
 
+
+
+  </main>
 
 <script src="script.js"></script>
 </body>
