@@ -15,7 +15,7 @@ shoppingIcon.addEventListener("click", () => {
     if (cartDetails.classList.contains("cart-closed")) {
         cartDetails.classList.remove("cart-closed")
     } else {
-        // placeHolder.classList.remove("placeholder-hide")   
+        // placeHolder.ssList.remove("placeholder-hide")   
         cartDetails.classList.add("cart-closed") 
     }
 })
