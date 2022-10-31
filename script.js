@@ -15,7 +15,7 @@ shoppingIcon.addEventListener("click", () => {
     if (cartDetails.classList.contains("cart-closed")) {
         cartDetails.classList.remove("cart-closed")
     } else {
-        // placeHolder.ssList.remove("placeholder-hide")   
+        // placeHolder.classList.remove("placeholder-hide")   
         cartDetails.classList.add("cart-closed") 
     }
 })
@@ -37,7 +37,7 @@ const addItems = () => {
     const delBtn = document.createElement("button");
     
 
-    delBtn.innerHTML = '<i class="fas fa-trash-alt"></i>';
+    delBtn.innerHTML = '<img src="../images/icon-delete.svg" class="trash">';
 
     newLi.innerHTML = `
                         <img src="images/image-product-1-thumbnail.jpg" alt="cart-thumbnail"/>
@@ -83,3 +83,5 @@ clear.addEventListener("click", () => {
     placeHolder.innerHTML = "Your Cart is Empty"
 
   });
+
+// console.log("hello");
